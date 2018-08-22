@@ -243,3 +243,7 @@ codingeverybody.com | hosts | 자원이 위치하고 있는 웹서버의 이름,
                 <td>URL</td><td>URL을 사용</td><td>&lt;img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"&gt;</td>
             </tr>
 </table>
+
+### 검색엔진 최적화(SEO)
+검색엔진에 잘 노출될 수 있도록 하는 활동
+[검색엔진 최적화 이유](https://support.google.com/webmasters/answer/35291?hl=ko)
