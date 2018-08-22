@@ -30,13 +30,15 @@
 - **<태그명 속성명 1="속성값" 속성명2="속성값2>컨텐트</태그명>**
 
 - **`<br />` , `<input type="button" value="버튼" />`같이 닽히는 태그가 없는 태그도 존재한다.**
-1. HEAD태그
+
+### 기본태그
+**1. HEAD태그**
 - <head>태그는 문서를 설명하는 태그들이 위치하는 태그다. <body>태그의 정보를 설명하는 메타 정보라고 할 수 있다.
 
-2. BODY태그
+**2. BODY태그**
 - <body>태그는 웹페이지가 담아내려는 정보 그 자체라고 생각하면 된다.
 
-3. meta태그
+**3. meta태그**
 ```html
     <meta name="" content="">
     <meta name="description" content="생활코딩은 일반인에게 프로그래밍을 알려주는 수업">
@@ -79,7 +81,7 @@
         <meta http-equiv="Page-Exit" content="RevealTrans(Duration=10, Transition=50)">
         ```
 
-4. url연결 태그`<a>`
+**4. url연결 태그`<a>`**
 ```html
 <a href="http://google.com">Google</a>
 ```
@@ -91,7 +93,7 @@
     - _parent : 현재 문서가 frame나 iframe에 로드된 경우 현재 문서를 로드한프래임에 문서로를 로드
     - 프래임의 이름
 
-5. iframe태그 `<iframe>`
+**5. iframe태그 `<iframe>`**
 ```html
     <iframe id="sample" src="http://w3c.org" width="100%" height="400" sandbox></iframe>
 ```
@@ -102,7 +104,7 @@
     + yes : 스크롤링 허용. 필요없는 경우에도 노출
     + no : 스크롤링 비허용
 
-6. 문단,줄바꿈,띄어쓰기
+**6. 문단,줄바꿈,띄어쓰기**
 ```html
     문단
     <p></P>
@@ -117,7 +119,7 @@
 - 줄바꿈은 엔드태그가 없으며 Enter키로는 불가능하다.
 - 띄어쓰기는 한칸만 띄우는것은 spacebar가 가능하지만 그이상띄어쓰기는 불가능하다.
 
-7. 이미지 삽입<img>
+**7. 이미지 삽입<img>**
 ```html
     <img src="" alt="" width="" height="" longdesc=""/>
 ```
@@ -127,7 +129,7 @@
 - width, height : 이미지 크기를 정의한다.(width를 정해놓으면 height는 기재하지않아도 자동으로 비율에 맞게 조정된다.)
 - longdesc : 이미지와 관련된 링크를 적는다.
 
-8. 목록(ul>li, ol>li)
+**8. 목록(ul>li, ol>li)**
 ```html
 <ol>
     <li></li>
@@ -140,19 +142,68 @@
 - ol : 순서가 있는 리스트 (태그 속 <li>(list item)에 순서대로 번호가 생성된다.)
 - ul : 순서가 없는 리스트 (태그 속 <li>(list item)에 순서대로 모형이 생성된다.)
 
-9. 이스케이핑
+**9. 이스케이핑**
 HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 브라우저에 해석되지 않고 표기할 수 있게 하는 언어들
-<br />
+
 - &amp;amp; → & (ampersand, U+0026), &amp;nbsp;<br />
 - &amp;lt; → < (less-than sign, U+003C)<br />
 - &amp;gt; → > (greater-than sign, U+003E)<br />
 - &amp;quot; → ” (quotation mark, U+0022)<br />
 - &amp;apos; → ‘ (apostrophe, U+0027)<br />
 
-10. 서버와 클라이언트
+**10. Form태그**
+폼이란 사용자의 데이터를 서버에 전송하는 방법이다. 일반적으로 아래와 같은 작업을 하기 위해서는 폼을 이용한다.
+
+- 로그인을 위해서 아이디/비밀번호를 입력할 때
+- 회원가입을 하기 위해서 개인정보를 입력할 때
+- 블로그나 게시판에 글을 작성하거나, 파일을 전송할 때
+
+```html
+<form action="" method="">
+    텍스트 필드, 라디오 버튼, 체크 박스와 같은 컨트롤을 생성하는 태그
+</form>
+```
+- action : 사용자가 입력한 데이터를 전송할 서버의 URL
+- method : 사용자가 입력한 데이터를 전송하는 방법
+    - get 
+        - action에 입력한 URL에 파라미터의 형태로 전송
+        - 전송할 수 있는 정보의 길이가 제한되어 있다.
+        - 퍼머링크로 사용될 수 있다.
+    - post 
+        - header의 body에 포함해서 전송
+        - URL 상에 전달한 정보가 표시되지 않는다.
+        - GET에 비해서 보안상 약간의 우위에 있다.(사실상 동일하다.)
+        - 전송할 수 있는 데이터의 길이 제한이 없다.
+        - 퍼머링크로 사용될 수 없다.
+        - 서버 쪽에 어떤 작업(데이터의 기록,삭제,수정 등)을 명령할 때 사용한다.
+
+**11. input태그**
+사용자로부터 텍스트를 입력받는다.
+```html
+<input type="text" name="값의 이름" value="값" disabled="disabled" readonly="readonly">
+```
+- type : text를 사용해야 텍스트 필드가 된다.(text, password, submit, hidden, radio 등이 있다.)
+    - text : 일반적인 텍스트를 적을 때 사용한다. 긴문장을 사용할 때는 `<textarea>`를 사용한다.
+    - password : 비밀번호를 입력하며 보여지지 않고 숨겨진다.
+    - submit : 버튼형식으로 나오며 눌렀을 시 `<form>`에 지정된 url로 정보가 전송된다.
+    - hidden : 사용자가 입력하지 못하며 화면에 표시도 되지않고 `submit`버튼을 눌렀을 때 지정된 정보가 전송된다.
+    - radio : 라디오 버튼이 생성된다.
+    보통, 전 페이지의 입력 여부 등 다음페이지가 전페이지의 상황을 알아야 할 때 사용한다.
+- name : 입력한 데이터의 이름
+- value : 데이터의 값, 입력한 데이터의 기본 값으로 이 값이 기본적으로 텍스트 필드에 표시된다.
+- disabled : 텍스트 필드가 불능 상태가 되며 서버로 전송해도 이 속성이 설정된 컨트롤의 데이터는 서버로 전송되지 않는다.
+- readonly : 텍스트 필드에 값이 입력되지 않는다. 서버로는 데이터가 전송된다.
+
+### 서버와 클라이언트
+
 > 폼을 이해하기 위해서는 우선 서버와 클라이언트라는 개념을 이해해야 한다. 서버는 정보를 제공하는 쪽이고, 클라이언트는 정보를 제공 받는 쪽을 의미한다. 웹브라우저의 주소창에 생활코딩의 홈페이지인 http://opentutorials.org를 입력하면 웹브라우저는 opentutorials.org에 해당하는 컴퓨터에게 생활코딩 컨텐츠를 요청한다. 이 맥락에서 웹브라우저는 정보를 요청하는 쪽 다시 말해서 제공 받는 쪽이기 때문에 클라이언트가 되고, opentutorials.org의 컨텐츠를 제공하는 컴퓨터는 정보를 제공하기 때문에 서버가 된다.
 
 <img src="https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/module/2/1043.png" align="center" hspace="300" vspace="100">
 
-    
+### URL
+URL(Uniform Resource Locator)이란 웹페이지, 이미지, 동영상과 같은 정보가 위치하는 유니크한 위치 정보
 
+부분 | 명칭 | 설명
+:---:|:---:|:---:
+http:// | scheme | 통신에 사용되는 방식, 프로토콜
+codingeverybody.com | hosts | 자원이 위치하고 있는 웹서버의 이름, 도메인이나 IP가 사용된다.
