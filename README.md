@@ -30,13 +30,13 @@
 - **<태그명 속성명 1="속성값" 속성명2="속성값2>컨텐트</태그명>**
 
 - **`<br />` , `<input type="button" value="버튼" />`같이 닽히는 태그가 없는 태그도 존재한다.**
-0. HEAD태그
+1. HEAD태그
 - <head>태그는 문서를 설명하는 태그들이 위치하는 태그다. <body>태그의 정보를 설명하는 메타 정보라고 할 수 있다.
 
-0. BODY태그
+2. BODY태그
 - <body>태그는 웹페이지가 담아내려는 정보 그 자체라고 생각하면 된다.
 
-0. meta태그
+3. meta태그
 ```html
     <meta name="" content="">
     <meta name="description" content="생활코딩은 일반인에게 프로그래밍을 알려주는 수업">
@@ -47,7 +47,7 @@
 - name : 메타데이터의 이름이다.
 - content : 메타데이터의 값이다.
 - http-equiv : meta요소에서 정의된 명령을 먼저 실행한 후에 페이지를 로딩한다. 이를 `프라그마 디렉티브`라고 한다.
-    - 속성 값
+    - **속성 값**
         - content-language : 전처리될 기본 언어를 지정할 수 있다. 선언하지 않는 경우 기본언어가 존재하지 않는 것으로 간주.
         ```html
         <meta http-equiv="content-language" content="ko" />
@@ -79,7 +79,7 @@
         <meta http-equiv="Page-Exit" content="RevealTrans(Duration=10, Transition=50)">
         ```
 
-1. url연결 태그`<a>`
+4. url연결 태그`<a>`
 ```html
 <a href="http://google.com">Google</a>
 ```
@@ -91,7 +91,7 @@
     - _parent : 현재 문서가 frame나 iframe에 로드된 경우 현재 문서를 로드한프래임에 문서로를 로드
     - 프래임의 이름
 
-2. iframe태그 `<iframe>`
+5. iframe태그 `<iframe>`
 ```html
     <iframe id="sample" src="http://w3c.org" width="100%" height="400" sandbox></iframe>
 ```
@@ -102,7 +102,7 @@
     + yes : 스크롤링 허용. 필요없는 경우에도 노출
     + no : 스크롤링 비허용
 
-3. 문단,줄바꿈,띄어쓰기
+6. 문단,줄바꿈,띄어쓰기
 ```html
     문단
     <p></P>
@@ -117,7 +117,7 @@
 - 줄바꿈은 엔드태그가 없으며 Enter키로는 불가능하다.
 - 띄어쓰기는 한칸만 띄우는것은 spacebar가 가능하지만 그이상띄어쓰기는 불가능하다.
 
-4. 이미지 삽입<img>
+7. 이미지 삽입<img>
 ```html
     <img src="" alt="" width="" height="" longdesc=""/>
 ```
@@ -127,7 +127,7 @@
 - width, height : 이미지 크기를 정의한다.(width를 정해놓으면 height는 기재하지않아도 자동으로 비율에 맞게 조정된다.)
 - longdesc : 이미지와 관련된 링크를 적는다.
 
-5. 목록(ul>li, ol>li)
+8. 목록(ul>li, ol>li)
 ```html
 <ol>
     <li></li>
@@ -140,7 +140,7 @@
 - ol : 순서가 있는 리스트 (태그 속 <li>(list item)에 순서대로 번호가 생성된다.)
 - ul : 순서가 없는 리스트 (태그 속 <li>(list item)에 순서대로 모형이 생성된다.)
 
-6. 이스케이핑
+9. 이스케이핑
 HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 브라우저에 해석되지 않고 표기할 수 있게 하는 언어들
 <br />
 - &amp;amp; → & (ampersand, U+0026), &amp;nbsp;<br />
@@ -148,4 +148,9 @@ HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 �
 - &amp;gt; → > (greater-than sign, U+003E)<br />
 - &amp;quot; → ” (quotation mark, U+0022)<br />
 - &amp;apos; → ‘ (apostrophe, U+0027)<br />
+
+10. 서버와 클라이언트
+> 폼을 이해하기 위해서는 우선 서버와 클라이언트라는 개념을 이해해야 한다. 서버는 정보를 제공하는 쪽이고, 클라이언트는 정보를 제공 받는 쪽을 의미한다. 웹브라우저의 주소창에 생활코딩의 홈페이지인 http://opentutorials.org를 입력하면 웹브라우저는 opentutorials.org에 해당하는 컴퓨터에게 생활코딩 컨텐츠를 요청한다. 이 맥락에서 웹브라우저는 정보를 요청하는 쪽 다시 말해서 제공 받는 쪽이기 때문에 클라이언트가 되고, opentutorials.org의 컨텐츠를 제공하는 컴퓨터는 정보를 제공하기 때문에 서버가 된다.
+
+![ServerAndClient]](https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/module/2/1043.png)
 
