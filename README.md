@@ -187,8 +187,16 @@ HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 �
     - password : 비밀번호를 입력하며 보여지지 않고 숨겨진다.
     - submit : 버튼형식으로 나오며 눌렀을 시 `<form>`에 지정된 url로 정보가 전송된다.
     - hidden : 사용자가 입력하지 못하며 화면에 표시도 되지않고 `submit`버튼을 눌렀을 때 지정된 정보가 전송된다.
-    - radio : 라디오 버튼이 생성된다.
     보통, 전 페이지의 입력 여부 등 다음페이지가 전페이지의 상황을 알아야 할 때 사용한다.
+    - radio : 라디오 버튼이 생성된다.
+    - checkbox : 체크박스목록을 생성한다.
+    - file : 파일을 첨부하여 전송할 수 있다.
+        ```html
+            <form action="url" method="POST" enctype="multipart/form-data">
+                <input type="file" name="imgfile">
+                <input type="submit">
+            </form>
+        ```
 - name : 입력한 데이터의 이름
 - value : 데이터의 값, 입력한 데이터의 기본 값으로 이 값이 기본적으로 텍스트 필드에 표시된다.
 - disabled : 텍스트 필드가 불능 상태가 되며 서버로 전송해도 이 속성이 설정된 컨트롤의 데이터는 서버로 전송되지 않는다.
@@ -210,3 +218,28 @@ codingeverybody.com | hosts | 자원이 위치하고 있는 웹서버의 이름,
 |/codingeverybody_html_tutorial/url_72/example2.html | url-path | 루트 디렉토리부터 자원이 위치한 장소까지의 디렉토리와 파일명|
 ?mode=view | query | 웹서버에 넘기는 추가적인 질문
 #root | bookmark | 하이퍼링크를 클릭했을 때 특정 위치로 이동하기 위해서 사용
+
+### 경로
+- 상대경로 : 문서를 기준으로 한 다른 리소스들의 위치정보
+- 절대경로 : 문서의 위치를 가르키는 도메인을 포함한 전체 위치정보
+
+<table>
+            <tr>
+                <th>구분</th><th>기호</th><th>설명</th><th>코드</th>
+            </tr>
+            <tr>
+                <td rowspan="3">상대경로</td><td>../</td><td>부모 디렉토리</td><td>&lt;img src="../image/logo.png"/&gt;</td>
+            </tr>
+            <tr>
+                <td>./</td><td>현재 디렉토리</td><td>&lt;img src="./image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td>없음</td><td>현재 디렉토리 기호는 생략할 수 있다.</td><td>&lt;img src="image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td rowspan="2">절대경로</td><td>/</td><td>루트(root)디렉토리</td><td>&lt;img src="/codingeverybody_html_tutorial/url_72/image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td>URL</td><td>URL을 사용</td><td>&lt;img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"&gt;</td>
+            </tr>
+</table>

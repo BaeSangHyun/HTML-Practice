@@ -172,5 +172,32 @@
             <input type="checkbox" name="check" value="planning">기획<br>
             <input type="submit" value="제출">
         </form>
+        <br>
+        <form action="url" method="POST" enctype="multipart/form-data">
+            <input type="file" name="imgfile">
+            <input type="submit">
+        </form>
+
+        <table>
+            <tr>
+                <th>구분</th><th>기호</th><th>설명</th><th>코드</th>
+            </tr>
+            <tr>
+                <td rowspan="3">상대경로</td><td>../</td><td>부모 디렉토리</td><td>&lt;img src="../image/logo.png"/&gt;</td>
+            </tr>
+            <tr>
+                <td>./</td><td>현재 디렉토리</td><td>&lt;img src="./image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td>없음</td><td>현재 디렉토리 기호는 생략할 수 있다.</td><td>&lt;img src="image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td rowspan="2">절대경로</td><td>/</td><td>루트(root)디렉토리</td><td>&lt;img src="/codingeverybody_html_tutorial/url_72/image/logo.png"&gt;</td>
+            </tr>
+            <tr>
+                <td>URL</td><td>URL을 사용</td><td>&lt;img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"&gt;</td>
+            </tr>
+        </table>
+
     </body>
 </html>
