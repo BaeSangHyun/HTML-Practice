@@ -225,7 +225,7 @@ codingeverybody.com | hosts | 자원이 위치하고 있는 웹서버의 이름,
 
 <table>
             <tr>
-                <th>구분</th><th>기호</th><th>설명</th><th>코드</th>
+                <th>구분</th><th>기호</th><th>설명</th><th>코드 예시</th>
             </tr>
             <tr>
                 <td rowspan="3">상대경로</td><td>../</td><td>부모 디렉토리</td><td>&lt;img src="../image/logo.png"/&gt;</td>
