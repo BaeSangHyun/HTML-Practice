@@ -2,16 +2,90 @@
 <html>
     <head>
         <title>HelloWorld!</title>
+        <style>
+            
+            nav ul li {
+            display:inline;
+            border-left:1px solid #999;
+            font:bold 12px Dotum;
+            padding:0 10px;
+        }
+        div ul li {
+            display:inline;
+            border-left:1px solid #999;
+            font:bold 12px Dotum;
+            padding:0 10px;
+        }
+        div ol li {
+            display:inline;
+            border-left:1px solid #999;
+            font:bold 12px Dotum;
+            padding:0 10px;
+        }
+
+        </style>
     </head>
 
     <body>
+        <nav name="first"></nav>
             <iframe id="sample" name="example" src="http://w3c.org" width="100%" height="400" sandbox></iframe>
-        <p>
+        <div>
             <a href="http://opentutorials.org" target="example">프래임</a>
-        </p>
-        <p>
+        </div>
+        <div>
             <a href="http://google.com" title="Google" target="_blank">Google</a>
-        </p>
+        </div>
+        <div>
+            <a href="https://namu.wiki/w/%ED%83%9C%EC%96%91%20%EB%A7%8C%EC%84%B8" title="Praise the sun"><img src="https://cdn.namuwikiusercontent.com/s/09dc9657626deec3908a534863eda878b5fe126bb3607ad71d81237322eff7cf78f8b84d2288edb86c391fa1f4429e12f208935908b8a4dc6d8509a15f834235dc94f6e54f4c5f4364ea3c49e7bba384?e=1541089531&k=fG72KdGXm-p26uvjzvUV7Q"
+            alter="Praise the sun" width="400"/></a>
+        </div>
+
+        <div>
+            <div>
+                <ul>
+                    <li>테스트1
+                        <ul>
+                            <li>test1</li>
+                        </ul>
+                    </li>
+                    <li>테스트2</li>
+                    <li>테스트3</li>
+                </ul>
+            </div>
+            <div>
+                <ol>
+                    <li>테스트1</li>
+                    <li>테스트2</li>
+                   <li>테스트3</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li>Menu1</li>
+                <li>Menu2</li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <nav>
+                <ul>
+                    <li><a href="#" target="first">MENU1</a></li>
+                    <li><a href="#">MENU2</a></li>
+                    <li><a href="#">MENU3</a></li>
+                    <li><a href="#">MENU4</a></li>
+                    <li><a href="#">MENU5</a></li>
+                </ul>   
+            </nav>   
+        
+
         
     </body>
 </html>
