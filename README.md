@@ -95,11 +95,9 @@
 6. 이스케이핑
 HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 브라우저에 해석되지 않고 표기할 수 있게 하는 언어들
 <br />
+&amp; → & (ampersand, U+0026), &amp;nbsp;
+&amp;lt; → < (less-than sign, U+003C)
+&amp;gt; → > (greater-than sign, U+003E)
+&amp;quot; → ” (quotation mark, U+0022)
+&amp;apos; → ‘ (apostrophe, U+0027)
 
-> | 문자 | 코드 |
-> |:---:|:---:|
-> | &amp;amp; | & |
-> | &amp;lt; | < |
-> | &amp;gt; | > |
-> | &amp;quot; | " |
-> | &amp;apos; | ' |
