@@ -207,3 +207,6 @@ URL(Uniform Resource Locator)이란 웹페이지, 이미지, 동영상과 같은
 :---:|:---:|:---:
 http:// | scheme | 통신에 사용되는 방식, 프로토콜
 codingeverybody.com | hosts | 자원이 위치하고 있는 웹서버의 이름, 도메인이나 IP가 사용된다.
+|/codingeverybody_html_tutorial/url_72/example2.html | url-path | 루트 디렉토리부터 자원이 위치한 장소까지의 디렉토리와 파일명|
+?mode=view | query | 웹서버에 넘기는 추가적인 질문
+#root | bookmark | 하이퍼링크를 클릭했을 때 특정 위치로 이동하기 위해서 사용
