@@ -30,6 +30,54 @@
 - **<태그명 속성명 1="속성값" 속성명2="속성값2>컨텐트</태그명>**
 
 - **`<br />` , `<input type="button" value="버튼" />`같이 닽히는 태그가 없는 태그도 존재한다.**
+0. HEAD태그
+- <head>태그는 문서를 설명하는 태그들이 위치하는 태그다. <body>태그의 정보를 설명하는 메타 정보라고 할 수 있다.
+
+0. BODY태그
+- <body>태그는 웹페이지가 담아내려는 정보 그 자체라고 생각하면 된다.
+
+0. meta태그
+```html
+    <meta name="" content="">
+    <meta name="description" content="생활코딩은 일반인에게 프로그래밍을 알려주는 수업">
+    <meta name="keywords" content="HTML,HEAD,META">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">  --현 문서가 사용하는 문자에 대한 정보
+```
+- 문서에 대한 정보를 기술하는 태그이다.
+- name : 메타데이터의 이름이다.
+- content : 메타데이터의 값이다.
+- http-equiv : meta요소에서 정의된 명령을 먼저 실행한 후에 페이지를 로딩한다. 이를 `프라그마 디렉티브`라고 한다.
+    - 속성 값
+        - content-language : 전처리될 기본 언어를 지정할 수 있다. 선언하지 않는 경우 기본언어가 존재하지 않는 것으로 간주.
+        ```html
+        <meta http-equiv="content-language" content="ko" />
+        ```
+        - content-type : 문자 인코딩을 선언한다. `content`속성의 문자열 `text/html`와 아스키, 대문자 구별없이 일치해야만 한다. 그 뒤 리터럴 문자열 `charset`이 따라와야하며 문자인코딩에 해당하는 이름이 있어야 한다.
+        XML에서는 사용할 수 없다.
+        ```html
+        <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+        ```
+        - default-style : 대체 스타일시트 집합의 이름을 설정한다.
+        ```html
+         <meta http-equiv="content-style-type" content="text/css">
+         ```
+        - refresh : 리다이렉트처럼 페이지를 지정한 시간 이후에 새로고침을 할 수 있다. 값은 유효한 정수만 되며 초단위로 나타낸다.
+        ```html
+        <meta http-equiv="refresh" content="10, www.naver.com">
+        ```
+        - Content-Script-Type : 스크립트 형식을 지정한다. 형식에는 text/javascript 와 VBScript가 있다.
+        ```html
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        ```
+        - Content-Style-Type : 스타일시트 형식을 지정해준다.
+        ```html
+            <meta http-equiv="Content-Style-Type" content="text/css">
+        ```
+        - Page-Enter/Exit : 속성값이 Page-Enter, Page-Exit는 웹문서를 들어오거나 나갈 때 한쪽 모서리 부터 서서히 드러나거나 사라지는 효과를 줍니다.
+        ```html
+        <meta http-equiv="Page-Enter" content="RevealTrans(Duration=10, Transition=50)">
+        <meta http-equiv="Page-Exit" content="RevealTrans(Duration=10, Transition=50)">
+        ```
 
 1. url연결 태그`<a>`
 ```html
@@ -95,9 +143,9 @@
 6. 이스케이핑
 HTML 코드 등 브라우저에 의해서 해석되는 약속된 문자들을 브라우저에 해석되지 않고 표기할 수 있게 하는 언어들
 <br />
-&amp; → & (ampersand, U+0026), &amp;nbsp;
-&amp;lt; → < (less-than sign, U+003C)
-&amp;gt; → > (greater-than sign, U+003E)
-&amp;quot; → ” (quotation mark, U+0022)
-&amp;apos; → ‘ (apostrophe, U+0027)
+- &amp;amp; → & (ampersand, U+0026), &amp;nbsp;<br />
+- &amp;lt; → < (less-than sign, U+003C)<br />
+- &amp;gt; → > (greater-than sign, U+003E)<br />
+- &amp;quot; → ” (quotation mark, U+0022)<br />
+- &amp;apos; → ‘ (apostrophe, U+0027)<br />
 

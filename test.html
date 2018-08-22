@@ -4,13 +4,13 @@
         <title>HelloWorld!</title>
         <style>
             
-            nav ul li {
+        #nav ul li {
             display:inline;
             border-left:1px solid #999;
             font:bold 12px Dotum;
             padding:0 10px;
         }
-        div ul li {
+        div ul li    {
             display:inline;
             border-left:1px solid #999;
             font:bold 12px Dotum;
@@ -22,7 +22,11 @@
             font:bold 12px Dotum;
             padding:0 10px;
         }
-
+        #name td, th{
+            border: 1px solid #ff4456;
+            text-align: center;
+        }
+        
         </style>
     </head>
 
@@ -69,13 +73,26 @@
         </div>
         <br />
         <br />
+        <table id="name">
+            <tr>
+                <th>이름</th><th>성별</th><th>나이</th><th>취미</th>
+            </tr>
+            <tr>
+                <td>배상현</td><td>남</td><td>25</td><td rowspan="2">비공개</td>
+            </tr>
+            <tr>
+                <td>배상민</td><td>남</td><td>24</td>
+            </tr>
+            <tr>
+                <td colspan="4">비공개</td>
+            </tr>
+        </table>
         <br />
         <br />
         <br />
         <br />
         <br />
-        <br />
-        <nav>
+        <nav id="nav">
                 <ul>
                     <li><a href="#" target="first">MENU1</a></li>
                     <li><a href="#">MENU2</a></li>
