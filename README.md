@@ -83,10 +83,10 @@
 
 **4. url연결 태그`<a>`**
 ```html
-<a href="http://google.com">Google</a>
+<a href="http://google.com" title="Google">Google</a>
 ```
 - href : 링크이름과 연결되어 있는 리소스의 주소
-- title : 연결되어 있는 리소스에 대한 설명, 롤오버 했을 때 툴팁으로 표시
+- title : 연결되어 있는 리소스에 대한 설명, 롤오버 했을 때 툴팁으로 표시. 반드시 표기하여야 한다.
 - target : 문서가 로드될 대상으로 아래의 속성값들이 있다.
     - _self : 현재의 문서가 로드된 프래임, 현재문서 사라짐
     - _blank : 새로운 창(탭)을 띄우고 거기에 문서를 로드
